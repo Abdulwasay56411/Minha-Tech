@@ -1,0 +1,488 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url(images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -31px;
+}
+
+.logo img {
+    width: 155px;
+    height: auto;
+    padding-top: 10px;
+}
+
+.button-link {
+    font-size: 13px;
+    font-family: 'Orbitron';
+    padding: 10px 35px;
+    margin-left: 18px;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn h1 {
+    font-size: 13px;
+    font-family: 'Orbitron';
+    padding: 10px 35px;
+    margin-left: 18px;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-link:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container-section {
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.heading-section {
+    width: 545px;
+    height: 134px;
+}
+
+.heading-section h1 {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.5;
+}
+
+.heading-section h1 span {
+    color: #06B8FF;
+}
+
+.heading-section p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-top: 10px;
+    letter-spacing: 1%;
+    color: #000000;
+}
+
+.input-section {
+    font-family: 'Montserrat';
+    width: 650px;
+    height: 955px;
+    padding-top: 25px;
+    padding-left: 50px;
+    border-radius: 20px;
+    background-color: #06B8FF0F;
+}
+
+.input-section input {
+    width: 545px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    outline: none;
+}
+
+.custom-select {
+    font-family: 'Montserrat';
+    width: 545px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1%;
+    justify-content: space-between;
+    margin-top: 32px;
+    color: #000000;
+    border: 2px solid #ffffff;
+    outline: none;
+}
+
+.text-section {
+    padding-top: 30px;
+    width: 100%;
+    height: 55px;
+}
+
+.text-section h1 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #0000008F;
+    margin-bottom: 20px;
+}
+
+.check-box {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #0000008F;
+}
+
+.check-box label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.check-box input[type="radio"] {
+    width: 13px;
+    height: 13.5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.check-box span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #0000008F;
+}
+
+.message-section {
+    padding-top: 20px;
+}
+
+
+.message-section textarea {
+    font-family: 'Poppins';
+    width: 545px;
+    height: 130px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8D8D8D;
+    resize: none;
+}
+
+.message-section label {
+    font-family: 'Nunito';
+    font-weight: 400;
+    font-size: 16px;
+    color: #787878;
+}
+
+button {
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: 'Orbitron';
+    padding: 10px 35px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #06B8FF, #00FB94);
+    background-origin: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scaleY(1.2);
+    transition: .4s;
+}
+
+footer {
+    background-color: #0A1A2C;
+}
+
+.footer-section {
+    font-family: 'Lato';
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 229px;
+    height: 229px;
+}
+
+.footer-para {
+    width: 395px;
+    height: 140px;
+    padding-top: 50px;
+}
+
+.footer-para p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 28px;
+}
+
+.footer-home {
+    padding-top: 50px;
+    font-family: 'Lato';
+}
+
+.footer-home h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.footer-home ul li {
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 18px;
+    list-style: none;
+    line-height: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer-about {
+    padding-top: 50px;
+    font-family: 'Lato';
+}
+
+.footer-about h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.footer-about ul li {
+    font-weight: 400;
+    padding-top: 18px;
+    font-size: 18px;
+    list-style: none;
+    line-height: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.under-line .line7 {
+    width: 90%;
+    height: 3px;
+    background-color: #D7E0E5;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+.under-para {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 30px;
+}
+
+.under-para p {
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.footer-icon i {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .container-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .heading-section,
+    .input-section {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 50px;
+        height: 955px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .img-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .img-section img {
+        width: 100%;
+        max-width: 400px;
+        padding-top: 90px;
+    }
+
+    .check-box input {
+        width: 30%;
+    }
+
+    .message-section {
+        width: 50%;
+    }
+
+    .input-section {
+        margin-top: -40px;
+    }
+
+    .input-section input,
+    .custom-select {
+        width: 100%;
+    }
+
+    .message-section textarea {
+        width: 100%;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .under-para {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 555px) {
+    .check-box label {
+        font-size: 10px;
+    }
+
+    input,
+    .message-section textarea {
+        width: 100%;
+    }
+
+    .custom-select {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .btn h1 {
+        font-size: 8px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+
+    .button-link {
+        font-size: 8px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+
+    .check-box input[type="radio"] {
+        width: 7px;
+        height: 7px;
+    }
+
+    .check-box span {
+        font-weight: 400;
+        font-size: 7px;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .footer-para,
+    .footer-home,
+    .footer-about {
+        width: 90%;
+    }
+
+    .footer-home h3,
+    .footer-about h3 {
+        font-size: 20px;
+    }
+
+    .footer-home h3 {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .footer-home ul li,
+    .footer-about ul li {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 355px) {
+    .check-box input[type="radio"] {
+        width: 5px;
+        height: 5px;
+    }
+
+    .check-box span {
+        font-weight: 400;
+        font-size: 5px;
+    }
+
+    .message-section textarea {
+        width: 80%;
+    }
+
+    .btn h1 {
+        font-size: 6px;
+        padding: 8px 8px;
+        display: inline-block;
+    }
+
+    .button-link {
+        font-size: 6px;
+        padding: 8px 8px;
+        display: inline-block;
+    }
+}
