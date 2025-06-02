@@ -494,4 +494,7 @@ footer {
     .footer-para {
         width: 90%;
     }
+    .under-line{
+        padding-top: 60px;
+    }
 }
