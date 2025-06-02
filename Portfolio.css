@@ -343,7 +343,7 @@ footer {
 .footer-section {
     font-family: 'Lato';
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -363,50 +363,6 @@ footer {
     font-weight: 400;
     color: #FFFFFF;
     line-height: 28px;
-}
-
-.footer-home {
-    padding-top: 50px;
-    font-family: 'Lato';
-}
-
-.footer-home h3 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    color: #FFFFFF;
-}
-
-.footer-home ul li {
-    font-weight: 400;
-    font-size: 18px;
-    padding-top: 18px;
-    list-style: none;
-    line-height: 28px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-.footer-about {
-    padding-top: 50px;
-    font-family: 'Lato';
-}
-
-.footer-about h3 {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    color: #FFFFFF;
-}
-
-.footer-about ul li {
-    font-weight: 400;
-    padding-top: 18px;
-    font-size: 18px;
-    list-style: none;
-    line-height: 28px;
-    color: #FFFFFF;
-    cursor: pointer;
 }
 
 .under-line .line7 {
@@ -465,12 +421,13 @@ footer {
 
     .cards,
     .hero,
-    .hero-card{
+    .hero-card {
         width: 90%;
         height: auto;
     }
+
     .hero-section {
-       margin-top: 30px;
+        margin-top: 30px;
         width: 90%;
         height: auto;
     }
@@ -503,16 +460,19 @@ footer {
     .logo img {
         width: 120px;
     }
+
     .btn h1 {
         font-size: 8px;
         padding: 10px 10px;
         display: inline-block;
     }
+
     .button-link {
         font-size: 8px;
         padding: 10px 10px;
         display: inline-block;
     }
+
     .heading h1 {
         font-size: 1.8rem;
     }
@@ -531,23 +491,7 @@ footer {
         height: auto;
     }
 
-    .footer-para,
-    .footer-home,
-    .footer-about {
+    .footer-para {
         width: 90%;
-    }
-
-    .footer-home h3,
-    .footer-about h3 {
-        font-size: 20px;
-    }
-    .footer-home h3{
-        font-size: 20px;
-       padding-top: 40px;
-    }
-
-    .footer-home ul li,
-    .footer-about ul li {
-        font-size: 16px;
     }
 }
