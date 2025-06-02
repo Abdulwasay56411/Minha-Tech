@@ -47,8 +47,8 @@ const icons = document.querySelector('.icons');
 const images = Array.from(icons.querySelectorAll('img'));
 
 let positions = [];
-const gap = 40;  // gap between images in pixels
-const speed = 1; // speed of scrolling
+const gap = 40;
+const speed = 1;
 
 function initPositions() {
   let x = 0;
@@ -64,9 +64,7 @@ function scrollImages() {
   for (let i = 0; i < images.length; i++) {
     positions[i] -= speed;
 
-    // If image completely off the left side, move it to the right after the last image
     if (positions[i] + images[i].offsetWidth < 0) {
-      // Find max right edge among images
       let maxRight = Math.max(...positions.map((pos, idx) => pos + images[idx].offsetWidth));
       positions[i] = maxRight + gap;
     }
@@ -76,6 +74,23 @@ function scrollImages() {
   requestAnimationFrame(scrollImages);
 }
 
-// Initialize and start scrolling
-initPositions();
-scrollImages();
+// ✅ Wait for all images to load before initializing
+let loadedCount = 0;
+images.forEach((img) => {
+  if (img.complete) {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      initPositions();
+      scrollImages();
+    }
+  } else {
+    img.onload = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        initPositions();
+        scrollImages();
+      }
+    };
+  }
+});
+
