@@ -280,6 +280,16 @@ footer {
     margin-right: 10px;
     cursor: pointer;
 }
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @media (max-width: 992px) {
     .container-section {
@@ -345,6 +355,19 @@ footer {
         padding: 20px;
     }
 }
+@media (max-width: 690px) {
+    .btn h1 {
+        font-size: 10px;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+
+    .button-link {
+        font-size: 10px;
+        padding: 11px 11px;
+        display: inline-block;
+    }
+}
 
 @media (max-width: 555px) {
     .check-box label {
@@ -398,7 +421,33 @@ footer {
         padding-top: 60px;
     }
 }
+@media (max-width: 425px){
+    .btn h1 {
+        font-size: 6px;
+        padding: 8px 8px;
+        display: inline-block;
+    }
 
+    .button-link {
+        font-size: 6px;
+        padding: 8px 8px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 380px) {
+    .btn h1 {
+        font-size: 4px;
+        padding: 4px 4px;
+        display: inline-block;
+    }
+
+    .button-link {
+        font-size: 4px;
+        padding: 4px 4px;
+        display: inline-block;
+    }
+}
 
 @media (max-width: 355px) {
     .check-box input[type="radio"] {
@@ -415,15 +464,4 @@ footer {
         width: 80%;
     }
 
-    .btn h1 {
-        font-size: 6px;
-        padding: 8px 8px;
-        display: inline-block;
-    }
-
-    .button-link {
-        font-size: 6px;
-        padding: 8px 8px;
-        display: inline-block;
-    }
 }
