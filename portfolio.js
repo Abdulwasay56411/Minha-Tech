@@ -82,4 +82,3 @@ rightBtn.addEventListener('click',() =>{
 
 updateCards();
 setActiveButton(rightBtn, leftBtn);
-
