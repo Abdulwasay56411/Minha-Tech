@@ -15,7 +15,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   padding: 10px 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -33,9 +33,9 @@ header {
 }
 
 .button-link {
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Orbitron';
-  padding: 10px 35px;
+  padding: 10px 30px;
   margin-left: 18px;
   color: #fff;
   border: 2px solid transparent;
@@ -48,24 +48,9 @@ header {
 }
 
 .btn h1 {
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Orbitron';
-  padding: 10px 35px;
-  margin-left: 18px;
-  color: #fff;
-  border: 2px solid transparent;
-  border-radius: 30px;
-  background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn h1 {
-  font-size: 13px;
-  font-family: 'Orbitron';
-  padding: 10px 35px;
+  padding: 10px 30px;
   margin-left: 18px;
   color: #fff;
   border: 2px solid transparent;
@@ -88,11 +73,20 @@ header {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
-  color: #06B8FF;
+  color: #00FB94;
   text-align: center;
 }
 
 .heading-section h2 {
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+  color: #06B8FF;
+  padding-top: 10px;
+}
+.heading-section h3 {
   font-family: 'Raleway';
   font-weight: 500;
   font-size: 24px;
@@ -299,28 +293,24 @@ main {
   font-family: 'Inter';
   font-weight: 400;
   font-size: 48px;
-  letter-spacing: -3.83px;
+  letter-spacing: -1.83px;
   padding-top: 40px;
 
 }
 
 .main p {
-  width: 410.12px;
-  height: 49.8px;
   color: #ffff;
   font-family: 'Inter';
   font-weight: 400;
   font-size: 20px;
-  line-height: 100%;
-  letter-spacing: -0.96px;
   padding-top: 40px;
-
+  padding-left: 40px;
 }
 
 .input-section {
   padding-top: 100px;
   display: flex;
-  padding-bottom: 100px;
+  justify-content: center;
 }
 
 .input-section input {
@@ -345,7 +335,6 @@ main {
 
 .input-section button:hover {
   transform: scaleX(1.1);
-  color: orange;
   transition: .3s;
   cursor: pointer;
 }
@@ -618,8 +607,8 @@ footer {
 @media (max-width: 390px) {
 
   .btn h1 {
-    font-size: 4px;
-    padding: 4px 4px;
+    font-size: 5px;
+    padding: 5px 5px;
 }
 
 .button-link {

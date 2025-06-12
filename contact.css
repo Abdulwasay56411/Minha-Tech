@@ -30,9 +30,9 @@ header {
 }
 
 .button-link {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Orbitron';
-    padding: 10px 35px;
+    padding: 10px 30px;
     margin-left: 18px;
     color: #fff;
     border: 2px solid transparent;
@@ -45,9 +45,9 @@ header {
 }
 
 .btn h1 {
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Orbitron';
-    padding: 10px 35px;
+    padding: 10px 30px;
     margin-left: 18px;
     color: #fff;
     border: 2px solid transparent;

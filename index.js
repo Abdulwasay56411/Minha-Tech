@@ -95,18 +95,18 @@ images.forEach((img) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Select headings and paragraphs...
+
   const textEls = Array.from(document.querySelectorAll("h1, h2, p, a"));
-  // Select only those images which are NOT inside .icons
+
   const imgEls  = Array.from(document.querySelectorAll("img:not(.icons img)"));
 
-  // Combine them
+  
   const elements = [...textEls, ...imgEls];
 
-  // Add initial hidden state
+
   elements.forEach(el => el.classList.add("animate-on-scroll"));
 
-  // IntersectionObserver as before
+ 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-  // Also immediately reveal top‐of‐viewport items
+
   requestAnimationFrame(() => {
     elements.forEach(el => {
       const rect = el.getBoundingClientRect();

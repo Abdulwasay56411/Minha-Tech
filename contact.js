@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       threshold: 0.3
     });
 
-    //  Start observing + immediately check if already in viewport
+   
     elements.forEach(el => {
       observer.observe(el);
 
-      //  Check if element already visible on load
+   
       const rect = el.getBoundingClientRect();
       if (
         rect.top >= 0 &&
