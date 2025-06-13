@@ -102,15 +102,15 @@ header {
 }
 
 .heading-section {
-    padding: 30px;
-    padding-left: 100px;
+    padding-top: 30px;
+    text-align: center;
 }
 .heading-section h2 {
     font-family: 'Poppins';
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 1.5;
-    padding-top: 10px;
+    color: #0A1A2C;
+  
 }
 .cards-section {
     display: flex;
@@ -466,6 +466,9 @@ footer {
         padding: 10px 10px;
         display: inline-block;
     }
+    .heading-section h2 {
+        font-size: 1.5em;
+    }
 }
 
 /* Mobile Devices */
@@ -496,7 +499,7 @@ footer {
     }
 
     .heading-section h2 {
-        font-size: 28px;
+        font-size: 1.1em;
     }
 
     .footer-logo img {

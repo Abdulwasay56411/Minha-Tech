@@ -713,7 +713,9 @@ footer {
   .under-line {
     padding-top: 60px;
   }
-
+  .text-section p {
+    width: 90%;
+  }
 
 }
 
