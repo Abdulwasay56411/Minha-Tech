@@ -974,13 +974,12 @@ main {
     }
 
     .info-boxes {
-        flex-direction: column;
+        justify-content: center;
         gap: 15px;
     }
 
     .box {
         width: 100%;
-        max-width: 100%;
     }
     .heading-section p {
       width: 90%;
