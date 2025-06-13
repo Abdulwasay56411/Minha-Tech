@@ -549,6 +549,7 @@ main {
     color: #00bfff;
     font-weight: 700;
     font-size: 40px;
+    padding: 20px 0;
 }
 
 .clients-section h2 {
@@ -980,6 +981,9 @@ main {
     .heading-section p {
       width: 90%;
     }
+    .heading-section h2 {
+        font-size: 24px;
+    }
     
 
     .card,
@@ -1094,5 +1098,8 @@ main {
     .button-link {
         font-size: 3px;
         padding: 3px 3px;
+    }
+    .container-section h1 {
+        font-size: 24px;
     }
 }

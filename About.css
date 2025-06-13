@@ -716,6 +716,9 @@ footer {
   .text-section p {
     width: 90%;
   }
+  .text-section h1 {
+    font-size: 24px;
+  }
 
 }
 
