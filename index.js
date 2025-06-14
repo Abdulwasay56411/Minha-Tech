@@ -144,6 +144,20 @@ document.addEventListener("DOMContentLoaded", function() {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+
+    // ✅ Responsive breakpoints
+    breakpoints: {
+      // Mobile (width <= 768px)
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+      // Tablet and up
+      769: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      }
     }
   });
 

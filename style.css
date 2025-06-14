@@ -573,10 +573,24 @@ main {
 }
 
 .client-card img {
-    font-weight: 700;
-    font-size: 90px;
+    width: 48px;
+    height: 48px;
     margin-top: 20px;
-    padding-left: 20px;
+    margin-left: 30px; 
+}
+.client-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Lato';
+    padding-left: 85px;
+    margin-top: -50px;
+}
+.client-card h4 {
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 85px;
+    padding-top: 5px;
 }
 
 .client-card p {
