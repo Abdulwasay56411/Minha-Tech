@@ -194,22 +194,17 @@ main {
 }
 
 .heading-section h1 {
-    color: #06B8FF;
+    color: #0A1A2C;
     font-weight: 700;
-    font-size: 40px;
-}
-
-.heading-section h2 {
     font-size: 30px;
-    font-weight: 700;
-    margin-top: 13px;
-    color: #04013F;
 }
-
+  
 .heading-section p {
+    max-width: 600px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: justify;
     font-weight: 500;
-    line-height: 1.2;
-    margin-top: 20px;
 }
 
 .info-boxes {
@@ -240,7 +235,6 @@ main {
 .box img {
     width: 50px;
     height: 50px;
-    background-color: #fff;
 }
 
 .text-content {
@@ -340,7 +334,6 @@ main {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
-    background-color: #ffffff;
 }
 
 .card h1 {
@@ -445,10 +438,6 @@ main {
     text-align: left;
 }
 
-.new-card img {
-    background-color: #FFFFFF;
-}
-
 .new-card:hover {
     cursor: pointer;
     transform: translateY(-10px);
@@ -492,8 +481,9 @@ main {
 .images-section {
     display: flex;
     justify-content: center;
+    gap: 60px;
     flex-wrap: wrap;
-    gap: 70px;
+    margin-right: 50px;
     margin-top: 40px;
 }
 
@@ -510,7 +500,7 @@ main {
     padding: 25px 20px;
     border-radius: 14px;
     position: absolute;
-    bottom: -75px;
+    bottom: -55px;
     left: 60%;
     transform: translateX(-50%);
     width: 100%;
@@ -532,6 +522,7 @@ main {
     font-weight: 600;
     text-decoration: none;
     font-size: 20px;
+    margin: 10px;
 }
 
 .images-section {
@@ -595,7 +586,16 @@ main {
     margin-top: 20px;
     padding-left: 20px;
 }
-
+.swiper {
+    width: 100%;
+    padding-top: 30px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
 
 .under-lines {
     display: flex;
@@ -738,8 +738,9 @@ main {
     letter-spacing: 2%;
     color: #000000;
 }
+
 .phone h2 span {
-   color: #00bfff;
+    color: #00bfff;
 }
 
 .phone i {
@@ -800,16 +801,24 @@ main {
     color: #ffffff;
 }
 
-.footer-icon i {
-    width: 30px;
-    height: 30px;
-    padding: 7px;
-    border-radius: 100px;
+.footer-icon a {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
     background-color: #FFFFFF;
+    text-decoration: none;
     text-align: center;
+    line-height: 40px;
     margin-right: 10px;
-    cursor: pointer;
 }
+
+.footer-icon i {
+    font-size: 20px;
+    color: #000;
+    pointer-events: none;
+}
+
 
 .animate-on-scroll {
     opacity: 0;
@@ -852,8 +861,7 @@ main {
     }
 
     .main-section img {
-        padding-left: 20px;
-        max-width: 50%;
+       max-width: 50%; 
     }
 
     .info-boxes {
@@ -866,6 +874,7 @@ main {
         width: 100%;
         max-width: 300px;
     }
+
     .box img {
         width: 30%;
         padding-right: 20px;
@@ -981,14 +990,10 @@ main {
     .box {
         width: 100%;
     }
-    .heading-section p {
-      width: 90%;
-    }
-    .heading-section h2 {
-        font-size: 24px;
-    }
-    
 
+    .heading-section p {
+        width: 90%;
+    }
     .card,
     .new-card {
         width: 100%;
@@ -1056,6 +1061,7 @@ main {
     .image-section {
         margin-top: 60px;
     }
+
     .container-section h1 {
         font-size: 34px;
     }
@@ -1084,6 +1090,9 @@ main {
     .number p {
         font-size: 12px;
     }
+    .heading-section h1{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -1102,6 +1111,7 @@ main {
         font-size: 3px;
         padding: 3px 3px;
     }
+
     .container-section h1 {
         font-size: 24px;
     }

@@ -321,8 +321,13 @@ header {
 .circle-color i {
     font-size: 25px;
     color: #000000;
-    cursor: pointer;
 }
+.circle:hover, 
+.circle-color:hover {
+    background: linear-gradient(to right, #06B8FF, #00FB94);
+    
+}
+
 
 footer {
     background-color: #0A1A2C;
@@ -376,15 +381,22 @@ footer {
     color: #ffffff;
 }
 
-.footer-icon i {
-    width: 30px;
-    height: 30px;
-    padding: 7px;
-    border-radius: 100px;
+.footer-icon a {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
     background-color: #FFFFFF;
+    text-decoration: none;
     text-align: center;
+    line-height: 40px;
     margin-right: 10px;
-    cursor: pointer;
+}
+
+.footer-icon i {
+    font-size: 20px;
+    color: #000;
+    pointer-events: none;
 }
 .animate-on-scroll {
     opacity: 0;

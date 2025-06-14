@@ -131,3 +131,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+
+  // Start pe prev button chhupa dena
+  document.querySelector('.swiper-button-prev').style.display = 'none';
+
+  swiper.on('slideChange', function () {
+    if (swiper.activeIndex === 0) {
+      // Pehla slide hai: prev button hide
+      document.querySelector('.swiper-button-prev').style.display = 'none';
+    } else {
+      // Aage gaya hai: prev button dikhana
+      document.querySelector('.swiper-button-prev').style.display = 'block';
+    }
+  });
+});
+
+
+
