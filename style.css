@@ -561,8 +561,9 @@ main {
 .client-card {
     border: 2px solid #06B8FF0F;
     background-color: #06B8FF0F;
-    width: 530px;
-    height: 260px;
+    width: 80%;
+    height: auto;
+    padding-bottom: 20px;
     border-radius: 12px;
 }
 
@@ -609,42 +610,12 @@ main {
     display: flex;
     justify-content: center;
   }
+  .swiper-pagination {
+    position: relative;      /* card ke andar se nikal diya */
+    margin-top: 20px;        /* thoda space card se neeche */
+    text-align: center;
+  }
   
-
-.under-lines {
-    display: flex;
-    gap: 20px;
-    padding-top: 50px;
-    justify-content: center;
-}
-
-.under-lines .line3 {
-    width: 20px;
-    height: 12px;
-    background-color: #D7E0E5;
-    border-radius: 10px;
-}
-
-.under-lines .line4 {
-    width: 80px;
-    height: 12px;
-    background-color: #00bfff;
-    border-radius: 10px;
-}
-
-.under-lines .line5 {
-    width: 20px;
-    height: 12px;
-    background-color: #D7E0E5;
-    border-radius: 10px;
-}
-
-.under-lines .line6 {
-    width: 20px;
-    height: 12px;
-    background-color: #D7E0E5;
-    border-radius: 10px;
-}
 
 .contact-wrapper {
     display: flex;
@@ -1043,7 +1014,6 @@ main {
     .client-card {
         width: 90%;
         max-width: 90%;
-        height: auto;
     }
 
     .numbers {
