@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const counter = entry.target.querySelector("h1");
                 if (!counter.dataset.animated) {
                     runCounter(counter);
-                    counter.dataset.animated = "true"; // Mark as animated
+                    counter.dataset.animated = "true";
                 }
             }
         });
@@ -34,11 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.5
     });
 
-    // Set data-target attribute for each counter
     counters.forEach(counter => {
         counter.setAttribute("data-target", counter.innerText);
         counter.innerText = "0";
-        observer.observe(counter.parentElement); // Observe the parent `.number`
+        observer.observe(counter.parentElement); 
     });
 });
 
@@ -74,7 +73,7 @@ function scrollImages() {
   requestAnimationFrame(scrollImages);
 }
 
-// ✅ Wait for all images to load before initializing
+
 let loadedCount = 0;
 images.forEach((img) => {
   if (img.complete) {
@@ -141,39 +140,51 @@ document.addEventListener("DOMContentLoaded", function() {
       el: '.swiper-pagination',
       clickable: true
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-
-    // ✅ Responsive breakpoints
     breakpoints: {
-      // Mobile (width <= 768px)
       0: {
         slidesPerView: 1,
         slidesPerGroup: 1
       },
-      // Tablet and up
-      769: {
+      768: {
         slidesPerView: 2,
         slidesPerGroup: 2
       }
     }
   });
 
-  // Start pe prev button chhupa dena
-  document.querySelector('.swiper-button-prev').style.display = 'none';
+  const prev = document.querySelector('.custom-prev');
+  const next = document.querySelector('.custom-next');
 
-  swiper.on('slideChange', function () {
+  prev.style.display = 'none';
+
+  prev.addEventListener('click', () => swiper.slidePrev());
+  next.addEventListener('click', () => swiper.slideNext());
+
+  swiper.on('slideChange', function() {
+
     if (swiper.activeIndex === 0) {
-      // Pehla slide hai: prev button hide
-      document.querySelector('.swiper-button-prev').style.display = 'none';
+      prev.style.display = 'none';
     } else {
-      // Aage gaya hai: prev button dikhana
-      document.querySelector('.swiper-button-prev').style.display = 'block';
+      prev.style.display = 'flex'; 
+    }
+
+    if (swiper.isEnd) {
+      next.style.opacity = '0.5';
+      next.style.pointerEvents = 'none';
+    } else {
+      next.style.opacity = '1';
+      next.style.pointerEvents = 'auto';
     }
   });
 });
+
+
+
+
+
+ 
+
+
 
 
 

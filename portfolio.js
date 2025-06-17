@@ -34,7 +34,7 @@ const cards = document.querySelectorAll('.cards, .hero, .hero-card, .hero-sectio
 const leftCircle = document.querySelector('.circle');
 const rightCircle = document.querySelector('.circle-color');
 
-let currentPage = 0; // 0 = pehla 4 cards, 1 = next 4 cards
+let currentPage = 0; 
 
 showCards(0);
 updateCircles();
@@ -78,6 +78,28 @@ function updateCircles() {
         rightCircle.style.background = gradient;
     }
 }
+
+document.addEventListener("DOMContentLoaded", () =>{
+  const cards = document.querySelectorAll('.cards, .hero, .hero-card, .hero-section');
+
+  cards.forEach(card => card.classList.add("animate-on-scroll"));
+
+  const observer = new IntersectionObserver((entries, observer) =>{
+    entries.forEach(entry =>{
+      if(entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{
+    threshold: 0.2
+  });
+  
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+});
+
 
 
 

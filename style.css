@@ -183,7 +183,9 @@ main {
 .main-section img {
     width: 100%;
     height: 100%;
-    max-width: 380px;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 
@@ -194,7 +196,10 @@ main {
 }
 
 .heading-section h1 {
+    width: 100%;
+    max-width: 600px;
     color: #0A1A2C;
+    padding-top: 10px;
     font-weight: 700;
     font-size: 30px;
 }
@@ -248,7 +253,7 @@ main {
     margin: 0 0 5px 0;
 }
 
-.text-content p {
+.text-content h4 {
     font-size: 13px;
     color: #555;
     line-height: 1.2;
@@ -437,6 +442,10 @@ main {
     border: 2px solid transparent;
     text-align: left;
 }
+.new-card img {
+  width: 50px;
+  height: 50px;
+}
 
 .new-card:hover {
     cursor: pointer;
@@ -475,6 +484,7 @@ main {
 .portflio-section h2 {
     font-weight: 700;
     font-size: 30px;
+    color: #0A1A2C;
     padding: 20px 0px;
 }
 
@@ -570,7 +580,7 @@ main {
 .client-card:hover {
     cursor: pointer;
     transform: translateY(-10px);
-    transition: .3s;
+    transition:.3s ease;
 }
 
 .client-card img {
@@ -596,7 +606,7 @@ main {
 
 .client-card p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 17px;
     color: #000000;
     margin-top: 20px;
     padding-left: 20px;
@@ -611,10 +621,27 @@ main {
     justify-content: center;
   }
   .swiper-pagination {
-    position: relative;      /* card ke andar se nikal diya */
-    margin-top: 20px;        /* thoda space card se neeche */
+    position: relative;    
+    margin-top: 20px;       
     text-align: center;
   }
+
+  .custom-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .custom-prev,
+  .custom-next {
+    color: #06B8FF;
+    font-size: 50px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
   
 
 .contact-wrapper {
@@ -782,6 +809,7 @@ main {
     font-family: 'Lato';
     font-weight: 500;
     font-size: 16px;
+    padding-left: 20px;
     line-height: 24px;
     color: #ffffff;
 }
@@ -846,9 +874,13 @@ main {
     }
 
     .main-section img {
-       max-width: 50%; 
+        margin-left: 30px;
+        max-width: 70%; 
     }
-
+    .button{
+        text-align: center;
+    }
+   
     .info-boxes {
         flex-wrap: wrap;
         justify-content: center;
@@ -939,6 +971,9 @@ main {
         gap: 10px;
         padding: 20px;
     }
+    .image-section {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -976,6 +1011,9 @@ main {
         width: 100%;
     }
 
+    .heading-section h1 {
+        font-size: 24px;
+    }
     .heading-section p {
         width: 90%;
     }
@@ -1036,14 +1074,16 @@ main {
     .portflio-section h1 {
         text-align: center;
     }
-
-    .images-section {
-        margin-right: 50px;
-        gap: 30px;
-    }
-
     .image-section {
-        margin-top: 60px;
+        margin-left: 40px;
+    }
+    .image-section img {
+     width: 100%;
+    }
+    .img-box{
+    width: 90%;
+    height: auto;
+     left: 50%;
     }
 
     .container-section h1 {
