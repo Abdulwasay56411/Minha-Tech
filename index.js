@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 2,
     slidesPerGroup: 2,
     spaceBetween: 0,
+    loop: true,  
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -166,27 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper.slideNext();
   });
 
-  function updateNavButtons() {
-    if (swiper.activeIndex === 0) {
-      prev.style.pointerEvents = 'none';
-      prev.style.opacity = '0.5';
-    } else {
-      prev.style.pointerEvents = 'auto';
-      prev.style.opacity = '1';
-    }
-
-    if (swiper.isEnd) {
-      next.style.pointerEvents = 'none';
-      next.style.opacity = '0.5';
-    } else {
-      next.style.pointerEvents = 'auto';
-      next.style.opacity = '1';
-    }
-  }
-
-  updateNavButtons();
-
-  swiper.on('slideChange', updateNavButtons);
 });
 
 
