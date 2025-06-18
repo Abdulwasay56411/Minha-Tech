@@ -184,6 +184,7 @@ main {
 }
 
 .text-content h4 {
+  width: 100%;
   font-size: 13px;
   color: #555;
   line-height: 1.2;
@@ -202,6 +203,7 @@ main {
   letter-spacing: -2%;
   color: #06B8FF;
 }
+
 .heading h2 {
   font-weight: bold;
   padding-top: 10px;
@@ -545,12 +547,11 @@ footer {
   .about-section {
     padding: 20px 10px;
     gap: 20px;
-   justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   .Rectangle-img {
     width: 60%;
-    margin-left: 30px;
     height: auto;
   }
 
@@ -562,7 +563,7 @@ footer {
 
   .box {
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
   }
 
   .box img {
@@ -624,11 +625,13 @@ footer {
   }
 
 }
-@media screen and (max-width: 945px){
+
+@media screen and (max-width: 945px) {
   .container-section {
     flex-direction: column;
   }
-  .container-section img{
+
+  .container-section img {
     width: 60%;
   }
 
@@ -671,6 +674,7 @@ footer {
   .images h2 {
     font-size: 18px;
   }
+
   .images-size h1,
   .images-size h2 {
     font-size: 18px;
@@ -712,17 +716,19 @@ footer {
 
 
 }
-@media (max-width: 700px){
+
+@media (max-width: 700px) {
   .under-para {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 20px;
   }
+
   .under-para p {
     padding-left: 0;
     padding-right: 10px;
-   }
+  }
 }
 
 @media (max-width: 660px) {
@@ -735,9 +741,15 @@ footer {
     font-size: 9px;
     padding: 10px 10px;
   }
-  .card p{
+
+  .card p {
     font-size: 14px;
   }
+
+  .about-section {
+    justify-content: center;
+  }
+
   .Rectangle-img {
     width: 80%;
   }

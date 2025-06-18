@@ -254,6 +254,7 @@ main {
 }
 
 .text-content h4 {
+    width: 100%;
     font-size: 13px;
     color: #555;
     line-height: 1.2;
@@ -881,7 +882,6 @@ main {
     .Rectangle-img {
         width: 60%;
         height: auto;
-        margin-left: 30px;
     }
 
     .button {
@@ -896,7 +896,7 @@ main {
 
     .box {
         width: 100%;
-        max-width: 300px;
+        max-width: 270px;
     }
 
     .box img {
@@ -1041,6 +1041,9 @@ main {
     .custom-select {
         width: 100%;
         max-width: 100%;
+    }
+    .main-section {
+        justify-content:  center;
     }
 
     .Rectangle-img {
