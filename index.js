@@ -155,8 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prev = document.querySelector('.custom-prev');
   const next = document.querySelector('.custom-next');
 
-
-  prev.style.visibility = 'hidden';
+  prev.style.visibility = 'visible';
   next.style.visibility = 'visible';
 
   prev.addEventListener('click', () => {
@@ -167,24 +166,29 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper.slideNext();
   });
 
-  swiper.on('slideChange', function () {
+  function updateNavButtons() {
     if (swiper.activeIndex === 0) {
-      prev.style.visibility = 'hidden';
       prev.style.pointerEvents = 'none';
+      prev.style.opacity = '0.5';
     } else {
-      prev.style.visibility = 'visible';
       prev.style.pointerEvents = 'auto';
+      prev.style.opacity = '1';
     }
 
     if (swiper.isEnd) {
-      next.style.visibility = 'hidden';
       next.style.pointerEvents = 'none';
+      next.style.opacity = '0.5';
     } else {
-      next.style.visibility = 'visible';
       next.style.pointerEvents = 'auto';
+      next.style.opacity = '1';
     }
-  });
+  }
+
+  updateNavButtons();
+
+  swiper.on('slideChange', updateNavButtons);
 });
+
 
 
 
