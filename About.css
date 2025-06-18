@@ -549,6 +549,7 @@ footer {
   }
 
   .about-section img {
+    width: 60%;
     margin-left: 30px;
     height: auto;
   }
@@ -729,6 +730,9 @@ footer {
   }
   .card p{
     font-size: 14px;
+  }
+  .about-section img {
+    width: 80%;
   }
 }
 
