@@ -131,11 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper', {
     slidesPerView: 2,
     slidesPerGroup: 2,
-    spaceBetween: 20,
+    spaceBetween: 0,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -155,30 +155,36 @@ document.addEventListener("DOMContentLoaded", function() {
   const prev = document.querySelector('.custom-prev');
   const next = document.querySelector('.custom-next');
 
-  prev.style.display = 'none';
 
-  prev.addEventListener('click', () => swiper.slidePrev());
-  next.addEventListener('click', () => swiper.slideNext());
+  prev.style.visibility = 'hidden';
+  next.style.visibility = 'visible';
 
-  swiper.on('slideChange', function() {
+  prev.addEventListener('click', () => {
+    swiper.slidePrev();
+  });
 
+  next.addEventListener('click', () => {
+    swiper.slideNext();
+  });
+
+  swiper.on('slideChange', function () {
     if (swiper.activeIndex === 0) {
-      prev.style.display = 'none';
+      prev.style.visibility = 'hidden';
+      prev.style.pointerEvents = 'none';
     } else {
-      prev.style.display = 'flex'; 
+      prev.style.visibility = 'visible';
+      prev.style.pointerEvents = 'auto';
     }
 
     if (swiper.isEnd) {
-      next.style.opacity = '0.5';
+      next.style.visibility = 'hidden';
       next.style.pointerEvents = 'none';
     } else {
-      next.style.opacity = '1';
+      next.style.visibility = 'visible';
       next.style.pointerEvents = 'auto';
     }
   });
 });
-
-
 
 
 

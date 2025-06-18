@@ -564,7 +564,6 @@ main {
 .client-cards {
     display: flex;
     font-family: 'Raleway';
-    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
@@ -611,9 +610,11 @@ main {
 .client-card p {
     font-weight: 400;
     font-size: 17px;
+    text-align: justify;
+    hyphens: auto;
     color: #000000;
     margin-top: 20px;
-    padding-left: 20px;
+    padding: 10px;
 }
 
 .swiper {
@@ -633,21 +634,24 @@ main {
 }
 
 .custom-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 40%;
+    left: 0;
     width: 100%;
-    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 10;
 }
 
 .custom-prev,
 .custom-next {
     color: #06B8FF;
     font-size: 50px;
-    margin: 0px 20px;
     cursor: pointer;
 }
+
 
 
 .contact-wrapper {
@@ -971,6 +975,7 @@ main {
         align-items: center;
         text-align: center;
     }
+
     .image-section {
         margin-top: 60px;
     }
@@ -981,16 +986,18 @@ main {
         font-size: 12px;
         padding: 11px 13px;
     }
+
     .under-para {
         flex-direction: column;
         align-items: center;
         gap: 10px;
         padding: 20px;
     }
+
     .under-para p {
         padding-left: 0;
         padding-right: 10px;
-       }
+    }
 }
 
 /* Media Query for mobile phones */
@@ -1042,8 +1049,9 @@ main {
         width: 100%;
         max-width: 100%;
     }
+
     .main-section {
-        justify-content:  center;
+        justify-content: center;
     }
 
     .Rectangle-img {
@@ -1069,7 +1077,7 @@ main {
     }
 
     .client-card {
-        width: 90%;
+        width: 75%;
         max-width: 90%;
     }
 
