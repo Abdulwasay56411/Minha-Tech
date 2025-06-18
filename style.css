@@ -179,9 +179,9 @@ main {
     justify-content: center;
 }
 
-.main-section img {
+.Rectangle-img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     max-width: 380px;
     margin-top: 20px;
     border-radius: 10px;
@@ -878,7 +878,7 @@ main {
         justify-content: flex-start;
     }
 
-    .main-section img {
+    .Rectangle-img {
         width: 60%;
         height: auto;
         margin-left: 30px;
@@ -971,14 +971,6 @@ main {
         align-items: center;
         text-align: center;
     }
-
-    .under-para {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-    }
-
     .image-section {
         margin-top: 60px;
     }
@@ -989,6 +981,16 @@ main {
         font-size: 12px;
         padding: 11px 13px;
     }
+    .under-para {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    .under-para p {
+        padding-left: 0;
+        padding-right: 10px;
+       }
 }
 
 /* Media Query for mobile phones */
@@ -1040,7 +1042,8 @@ main {
         width: 100%;
         max-width: 100%;
     }
-    .main-section img {
+
+    .Rectangle-img {
         width: 80%;
     }
 

@@ -105,13 +105,15 @@ header {
     padding-top: 30px;
     text-align: center;
 }
+
 .heading-section h2 {
     font-family: 'Poppins';
     font-size: 30px;
     font-weight: 600;
     color: #0A1A2C;
-  
+
 }
+
 .cards-section {
     display: flex;
     flex-wrap: wrap;
@@ -322,10 +324,11 @@ header {
     font-size: 25px;
     color: #000000;
 }
-.circle:hover, 
+
+.circle:hover,
 .circle-color:hover {
     background: linear-gradient(to right, #06B8FF, #00FB94);
-    
+
 }
 
 
@@ -399,16 +402,17 @@ footer {
     color: #000;
     pointer-events: none;
 }
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease;
-  }
-  
-  .animate-on-scroll.visible {
+}
+
+.animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
 /* ======= Responsive Design ======= */
 
@@ -457,17 +461,23 @@ footer {
         align-items: center;
         text-align: center;
     }
-
-    .under-para {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-    }
-
 }
-@media (max-width: 675px){
-    
+
+@media (max-width: 700px){
+    .under-para {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .under-para p {
+      padding-left: 0;
+      padding-right: 10px;
+     }
+  }
+
+@media (max-width: 675px) {
+
     .btn h1 {
         font-size: 10px;
         padding: 10px 10px;
@@ -479,9 +489,11 @@ footer {
         padding: 10px 10px;
         display: inline-block;
     }
+
     .heading-section h2 {
         font-size: 1.5em;
     }
+
 }
 
 /* Mobile Devices */
@@ -523,12 +535,13 @@ footer {
     .footer-para {
         width: 90%;
     }
-    .under-line{
+
+    .under-line {
         padding-top: 60px;
     }
 }
 
-@media (max-width: 405px){
+@media (max-width: 405px) {
     .btn h1 {
         font-size: 6px;
         padding: 8px 8px;
@@ -539,8 +552,9 @@ footer {
         padding: 6px 6px;
     }
 }
-@media (max-width: 355px){
-    
+
+@media (max-width: 355px) {
+
     .btn h1 {
         font-size: 4px;
         padding: 4px 4px;

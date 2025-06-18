@@ -355,13 +355,6 @@ footer {
         align-items: center;
         text-align: center;
     }
-
-    .under-para {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-    }
 }
 @media (max-width: 690px) {
     .btn h1 {
@@ -375,6 +368,16 @@ footer {
         padding: 11px 11px;
         display: inline-block;
     }
+        .under-para {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          padding: 20px;
+        }
+        .under-para p {
+          padding-left: 0;
+          padding-right: 10px;
+         }
 }
 
 @media (max-width: 555px) {
