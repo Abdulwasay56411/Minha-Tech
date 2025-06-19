@@ -68,6 +68,14 @@ header {
   transition: 0.3s;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
 .heading-section h1 {
   font-family: 'Raleway';
   font-weight: 700;
@@ -713,11 +721,39 @@ footer {
     height: auto;
   }
 
-
-
 }
 
 @media (max-width: 700px) {
+
+  .btn {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #0A1A2C;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 10;
+  }
+
+  .btn.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .button-link {
+    margin: 5px 0;
+    background-image: none;
+  }
+
+  .btn h1 {
+    margin: 5px 0;
+    background-image: none;
+  }
+
   .under-para {
     flex-direction: column;
     align-items: center;
@@ -726,22 +762,17 @@ footer {
   }
 
   .under-para p {
+    order: 2;
     padding-left: 0;
     padding-right: 10px;
+  }
+
+  .footer-icon {
+    order: 1;
   }
 }
 
 @media (max-width: 660px) {
-  .btn h1 {
-    font-size: 9px;
-    padding: 10px 10px;
-  }
-
-  .button-link {
-    font-size: 9px;
-    padding: 10px 10px;
-  }
-
   .card p {
     font-size: 14px;
   }
@@ -753,19 +784,18 @@ footer {
   .Rectangle-img {
     width: 80%;
   }
+
+  .box {
+    margin-right: 30px;
+    width: 100%;
+  }
+
+  .box img {
+    width: 25%;
+  }
 }
 
 @media (max-width: 510px) {
-  .btn h1 {
-    font-size: 7px;
-    padding: 9px 9px;
-  }
-
-  .button-link {
-    font-size: 7px;
-    padding: 9px 9px;
-  }
-
   .under-line {
     padding-top: 60px;
   }
@@ -784,27 +814,7 @@ footer {
 
 }
 
-@media (max-width: 396px) {
-
-  .btn h1 {
-    font-size: 5px;
-    padding: 5px 5px;
-  }
-
-  .button-link {
-    font-size: 5px;
-    padding: 5px 5px;
-  }
-
-}
-
 @media (max-width: 335px) {
-
-  .btn h1,
-  .button-link {
-    font-size: 3px;
-    padding: 3px 3px;
-  }
 
   .text-section h1 {
     font-size: 20px;

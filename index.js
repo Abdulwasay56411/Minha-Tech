@@ -1,3 +1,10 @@
+const menuIcon = document.querySelector('.menu-icon');
+const btnContainer = document.querySelector('.btn');
+
+menuIcon.addEventListener('click', () => {
+  btnContainer.classList.toggle('show');
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".number h1");
     const speed = 200;
@@ -133,10 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerView: 1,        // ✨ har view pe sirf 1 card
+    slidesPerGroup: 1,
     spaceBetween: 0,
-    loop: true,  
+    loop: true,
+    centeredSlides: false,   // ✨ start se align ho slides
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -147,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1
       },
       768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2
+        slidesPerView: 1,    // ✨ desktop pe bhi 1 card (agar 2 chahiye to 2 likh dena)
+        slidesPerGroup: 1
       }
     }
   });
@@ -166,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
   next.addEventListener('click', () => {
     swiper.slideNext();
   });
-
 });
+
 
 
 

@@ -1,3 +1,10 @@
+const menuIcon = document.querySelector('.menu-icon');
+const btnContainer = document.querySelector('.btn');
+
+menuIcon.addEventListener('click', () => {
+  btnContainer.classList.toggle('show');
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll("h1, h2, p, img, a");
 

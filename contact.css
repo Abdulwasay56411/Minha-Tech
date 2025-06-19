@@ -65,11 +65,20 @@ header {
     transition: 0.3s;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 .container-section {
     font-family: 'Montserrat';
     display: flex;
     justify-content: space-around;
-    padding: 80px;
+    flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 .heading-section {
@@ -96,9 +105,15 @@ header {
     color: #000000;
 }
 
+.img-section img {
+    width: 300px;
+    height: auto;
+}
+
 .input-section {
     font-family: 'Montserrat';
-    width: 650px;
+    width: 100%;
+    max-width: 500px;
     height: 955px;
     padding-top: 25px;
     padding-left: 50px;
@@ -107,7 +122,7 @@ header {
 }
 
 .input-section input {
-    width: 545px;
+    width: 90%;
     height: 50px;
     margin-top: 20px;
     padding: 10px;
@@ -117,7 +132,7 @@ header {
 
 .custom-select {
     font-family: 'Montserrat';
-    width: 545px;
+    width: 90%;
     height: 50px;
     font-size: 14px;
     font-weight: 400;
@@ -180,7 +195,7 @@ header {
 
 .message-section textarea {
     font-family: 'Poppins';
-    width: 545px;
+    width: 80%;
     height: 130px;
     margin-top: 10px;
     background-color: #ffffff;
@@ -288,30 +303,36 @@ footer {
     color: #000;
     pointer-events: none;
 }
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease;
-  }
-  
-  .animate-on-scroll.visible {
+}
+
+.animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
-@media (max-width: 992px) {
+@media (max-width: 1050px){
     .container-section {
         flex-direction: column;
         align-items: center;
         padding: 40px 20px;
     }
 
-    .heading-section,
+    .heading-section{
+        width: 90%;
+        height: auto;
+        margin-bottom: 70px;
+    }
     .input-section {
         width: 100%;
-        max-width: 100%;
+        max-width: 500px;
         padding-right: 50px;
         height: 955px;
+        margin: 0 auto;
     }
 
     form {
@@ -325,7 +346,7 @@ footer {
 
     .img-section img {
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
         padding-top: 90px;
     }
 
@@ -334,7 +355,7 @@ footer {
     }
 
     .message-section {
-        width: 50%;
+        width: 100%;
     }
 
     .input-section {
@@ -349,35 +370,64 @@ footer {
     .message-section textarea {
         width: 100%;
     }
+}
+ 
 
+@media (max-width: 992px) {
     .footer-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-bottom: 40px;
     }
 }
-@media (max-width: 690px) {
-    .btn h1 {
-        font-size: 10px;
-        padding: 10px 10px;
-        display: inline-block;
+
+@media (max-width: 700px) {
+    .btn {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #0A1A2C;
+        flex-direction: column;
+        padding: 10px;
+        z-index: 10;
+    }
+
+    .btn.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
     }
 
     .button-link {
-        font-size: 10px;
-        padding: 11px 11px;
-        display: inline-block;
+        margin: 5px 0;
+        background-image: none;
     }
-        .under-para {
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-          padding: 20px;
-        }
-        .under-para p {
-          padding-left: 0;
-          padding-right: 10px;
-         }
+
+    .btn h1 {
+        margin: 5px 0;
+        background-image: none;
+    }
+
+    .under-para {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .under-para p {
+        order: 2;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+
+    .footer-icon {
+        order: 1;
+    }
 }
 
 @media (max-width: 555px) {
@@ -398,22 +448,11 @@ footer {
         width: 120px;
     }
 
-    .btn h1 {
-        font-size: 8px;
-        padding: 10px 10px;
-        display: inline-block;
-    }
-
-    .button-link {
-        font-size: 8px;
-        padding: 10px 10px;
-        display: inline-block;
-    }
-
     .check-box input[type="radio"] {
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
     }
+
     .heading-section h1 {
         font-size: 34px;
     }
@@ -431,42 +470,17 @@ footer {
     .footer-para {
         width: 90%;
     }
-    .under-line{
+
+    .under-line {
         padding-top: 60px;
     }
 }
-@media (max-width: 425px){
-    .btn h1 {
-        font-size: 6px;
-        padding: 8px 8px;
-        display: inline-block;
-    }
 
-    .button-link {
-        font-size: 6px;
-        padding: 8px 8px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 380px) {
-    .btn h1 {
-        font-size: 4px;
-        padding: 4px 4px;
-        display: inline-block;
-    }
-
-    .button-link {
-        font-size: 4px;
-        padding: 4px 4px;
-        display: inline-block;
-    }
-}
 
 @media (max-width: 355px) {
     .check-box input[type="radio"] {
-        width: 5px;
-        height: 5px;
+        width: 6px;
+        height: 6px;
     }
 
     .check-box span {
@@ -477,6 +491,7 @@ footer {
     .message-section textarea {
         width: 80%;
     }
+
     .heading-section h1 {
         font-size: 24px;
     }

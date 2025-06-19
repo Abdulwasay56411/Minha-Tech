@@ -62,6 +62,13 @@ header {
     color: #fff;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
 .heading {
     display: flex;
     justify-content: space-between;
@@ -84,6 +91,8 @@ header {
 }
 
 .heading .text p {
+    width: 100%;
+    max-width: 650px;
     font-size: 20px;
     line-height: 1.5;
     color: #fff;
@@ -125,28 +134,6 @@ header {
     opacity: 0.8;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.icon {
-    margin-left: 35px;
-    padding-bottom: 20px;
-}
-
-.icon i {
-    background-color: #fff;
-    width: 46px;
-    height: 46px;
-    font-size: 25px;
-    padding-top: 12px;
-    text-align: center;
-    color: #000;
-    border-radius: 100%;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-.icon a {
-    text-decoration: none;
 }
 
 main {
@@ -292,12 +279,12 @@ main {
 
 .head-contact h1 {
     color: #06B8FF;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
 }
 
 .head-contact h2 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: #0E1F51;
     padding-bottom: 40px;
@@ -413,13 +400,13 @@ main {
 
 .hero-section h1 {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     color: #00bfff;
 }
 
 .hero-section h2 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 35px;
     color: #0E1F51;
     padding: 20px 0px;
 }
@@ -480,12 +467,12 @@ main {
 .portflio-section h1 {
     color: #00bfff;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .portflio-section h2 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 35px;
     color: #0A1A2C;
     padding: 20px 0px;
 }
@@ -551,13 +538,13 @@ main {
 .clients-section h1 {
     color: #00bfff;
     font-weight: 700;
-    font-size: 40px;
-    padding: 20px 0;
+    font-size: 35px;
+    padding: 20px ;
 }
 
 .clients-section h2 {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 30px;
     color: #0E1F51;
 }
 
@@ -609,9 +596,7 @@ main {
 
 .client-card p {
     font-weight: 400;
-    font-size: 17px;
-    text-align: justify;
-    hyphens: auto;
+    font-size: 16px;
     color: #000000;
     margin-top: 20px;
     padding: 10px;
@@ -619,6 +604,7 @@ main {
 
 .swiper {
     width: 100%;
+    max-width: 600px;
     padding-top: 30px;
 }
 
@@ -651,8 +637,6 @@ main {
     font-size: 50px;
     cursor: pointer;
 }
-
-
 
 .contact-wrapper {
     display: flex;
@@ -858,10 +842,25 @@ main {
 @media (max-width: 1064px) {
 
     .heading {
+        flex-direction: column;    
+        align-items: center; 
+          
+      }
+    
+      .heading .image {
+        order: 1;                  
+      }
+      .heading .image img {
+        width: 100%;
+        max-width: 70%;
+      }
+    
+      .heading .text {
+        display: flex;
         flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-    }
+        align-items: center;
+        order: 2;                   
+      }
 
     .heading .text,
     .heading .image {
@@ -874,6 +873,8 @@ main {
     }
 
     .heading .text p {
+      text-align: center;
+        width: 100%;
         font-size: 18px;
     }
 
@@ -932,7 +933,6 @@ main {
         max-width: 360px;
         height: auto;
     }
-
     .contact-wrapper {
         max-width: 100%;
         padding: 20px;
@@ -982,22 +982,45 @@ main {
 }
 
 @media (max-width: 700px) {
-    .button-link {
-        font-size: 12px;
-        padding: 11px 13px;
-    }
-
-    .under-para {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-    }
-
-    .under-para p {
-        padding-left: 0;
-        padding-right: 10px;
-    }
+        .btn {
+          display: none; 
+          position: absolute;
+          top: 60px;
+          right: 10px;
+          background: #0A1A2C;
+          flex-direction: column;
+          padding: 10px;
+          z-index: 10;
+        }
+      
+        .btn.show {
+          display: flex; 
+        }
+      
+        .menu-icon {
+          display: block; 
+        }
+      
+        .button-link {
+          margin: 5px 0; 
+          background-image: none;
+        }  
+        
+        .under-para {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+    
+        .under-para p {
+            order: 2;
+            padding-left: 0;
+            padding-right: 10px;
+        }
+        .footer-icon{
+            order: 1;
+        }
 }
 
 /* Media Query for mobile phones */
@@ -1013,19 +1036,18 @@ main {
     .logo img {
         width: 120px;
     }
-
-    .button-link {
-        font-size: 8px;
-        padding: 10px 10px;
-    }
-
+    
     .info-boxes {
         justify-content: center;
         gap: 15px;
     }
 
     .box {
+        margin-right: 30px;
         width: 100%;
+    }
+    .box img {
+        width: 25%;
     }
 
     .heading-section h1 {
@@ -1038,7 +1060,7 @@ main {
 
     .card,
     .new-card {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         height: auto;
     }
@@ -1069,16 +1091,11 @@ main {
     }
 
     .clients-section h1 {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .clients-section h2 {
-        font-size: 20px;
-    }
-
-    .client-card {
-        width: 75%;
-        max-width: 90%;
+        font-size: 18px;
     }
 
     .numbers {
@@ -1100,6 +1117,9 @@ main {
 
     .portflio-section h1 {
         text-align: center;
+    }
+    .portflio-section h2 {
+       font-size: 30px;
     }
 
     .image-section {
@@ -1136,11 +1156,6 @@ main {
 }
 
 @media (max-width: 425px) {
-    .button-link {
-        font-size: 6px;
-        padding: 8px 8px;
-    }
-
     .number p {
         font-size: 12px;
     }
@@ -1151,23 +1166,7 @@ main {
 }
 
 @media (max-width: 380px) {
-    .button-link {
-        font-size: 5px;
-        padding: 5px 5px;
-    }
-
     .footer-para p {
         font-size: 15px;
-    }
-}
-
-@media (max-width: 340px) {
-    .button-link {
-        font-size: 3px;
-        padding: 3px 3px;
-    }
-
-    .container-section h1 {
-        font-size: 24px;
     }
 }
