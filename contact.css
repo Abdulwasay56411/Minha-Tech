@@ -70,6 +70,13 @@ header {
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+    padding: 4px 8px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
+    background-origin: padding-box;
+    background-clip: padding-box, border-box;
+
 }
 
 

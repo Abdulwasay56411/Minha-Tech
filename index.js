@@ -5,6 +5,11 @@ menuIcon.addEventListener('click', () => {
   btnContainer.classList.toggle('show');
 });
 
+window.addEventListener('pageshow', () => {
+  btnContainer.classList.remove('show');
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".number h1");
     const speed = 200;
