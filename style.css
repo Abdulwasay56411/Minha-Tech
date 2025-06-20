@@ -180,6 +180,12 @@ main {
     margin-top: 20px;
     border-radius: 10px;
 }
+.Rectangle-img img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 
 
 .heading-section {
@@ -199,6 +205,7 @@ main {
 
 .heading-section p {
     max-width: 600px;
+    width: 100%;
     margin-top: 15px;
     font-weight: 500;
     font-size: 17px;
@@ -510,7 +517,6 @@ main {
     width: 100%;
     height: 60%;
     text-align: center;
-    cursor: pointer;
 }
 
 .img-box h3 {
@@ -526,6 +532,7 @@ main {
     font-weight: 600;
     text-decoration: none;
     font-size: 20px;
+    cursor: pointer;
     margin: 10px;
 }
 
@@ -878,9 +885,10 @@ main {
     }
 
     .heading .text p {
-      text-align: center;
+        text-align: center;
+        hyphens: auto;
         width: 100%;
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .main-section {
