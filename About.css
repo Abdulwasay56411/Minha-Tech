@@ -128,11 +128,11 @@ main {
 .Rectangle-img {
   width: 100%;
   height: auto;
+  max-height: 400px;
   max-width: 380px;
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 10px;
 }
-
 
 .text-section {
   font-family: 'Raleway';
@@ -150,6 +150,8 @@ main {
 
 .text-section p {
   max-width: 600px;
+  text-align: justify;
+  hyphens: auto;
   margin-top: 15px;
   font-size: 17px;
   font-weight: 500;
@@ -324,7 +326,7 @@ main {
   font-size: 16px;
   letter-spacing: -0.75px;
   color: #7A7D9C;
-} */
+}
 
 .image-section {
   display: flex;
@@ -333,7 +335,7 @@ main {
   padding-top: 30px;
 }
 
-/* .images {
+.images {
   text-align: center;
 }
 .images-size {
@@ -788,7 +790,9 @@ footer {
 
   .Rectangle-img {
     width: 80%;
-  }
+    max-height: 350px;
+    height: auto;
+}
 
   .box {
     margin-right: 30px;

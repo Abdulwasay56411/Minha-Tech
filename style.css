@@ -175,18 +175,12 @@ main {
 
 .Rectangle-img {
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 420px;
     max-width: 380px;
     margin-top: 20px;
     border-radius: 10px;
 }
-.Rectangle-img img {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
 
 .heading-section {
     font-family: 'Raleway';
@@ -206,6 +200,8 @@ main {
 .heading-section p {
     max-width: 600px;
     width: 100%;
+    text-align: justify;
+    hyphens: auto;
     margin-top: 15px;
     font-weight: 500;
     font-size: 17px;
@@ -1091,6 +1087,8 @@ main {
 
     .Rectangle-img {
         width: 80%;
+        max-height: 350px;
+        height: auto;
     }
 
     .phone {
