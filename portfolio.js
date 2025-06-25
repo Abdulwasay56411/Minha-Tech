@@ -9,7 +9,6 @@ window.addEventListener('pageshow', () => {
   btnContainer.classList.remove('show');
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll("h1, h2, p, img, a");
 

@@ -451,11 +451,13 @@ footer {
     .cards,
     .hero,
     .hero-card {
+        max-width: 500px;
         width: 90%;
         height: auto;
     }
 
     .hero-section {
+        max-width: 500px;
         margin-top: 30px;
         width: 90%;
         height: auto;
