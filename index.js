@@ -10,6 +10,50 @@ window.addEventListener('pageshow', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".number h1");
+    const speed = 200;
+
+    function runCounter(counter) {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const increment = target / speed;
+
+        function updateCounter() {
+            count += increment;
+            if (count < target) {
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target;
+            }
+        }
+
+        updateCounter();
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target.querySelector("h1");
+                if (!counter.dataset.animated) {
+                    runCounter(counter);
+                    counter.dataset.animated = "true";
+                }
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counter.setAttribute("data-target", counter.innerText);
+        counter.innerText = "0";
+        observer.observe(counter.parentElement); 
+    });
+});
+
+
 const icons = document.querySelector('.icons');
 const images = Array.from(icons.querySelectorAll('img'));
 
@@ -59,49 +103,6 @@ images.forEach((img) => {
       }
     };
   }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".number h1");
-    const speed = 200;
-
-    function runCounter(counter) {
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const increment = target / speed;
-
-        function updateCounter() {
-            count += increment;
-            if (count < target) {
-                counter.innerText = Math.ceil(count);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.innerText = target;
-            }
-        }
-
-        updateCounter();
-    }
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target.querySelector("h1");
-                if (!counter.dataset.animated) {
-                    runCounter(counter);
-                    counter.dataset.animated = "true";
-                }
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    counters.forEach(counter => {
-        counter.setAttribute("data-target", counter.innerText);
-        counter.innerText = "0";
-        observer.observe(counter.parentElement); 
-    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -159,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1
       },
       768: {
-        slidesPerView: 1,  
+        slidesPerView: 1,   
         slidesPerGroup: 1
       }
     }
@@ -179,4 +180,3 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper.slideNext();
   });
 });
-
