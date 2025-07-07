@@ -10,50 +10,6 @@ window.addEventListener('pageshow', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".number h1");
-    const speed = 200;
-
-    function runCounter(counter) {
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const increment = target / speed;
-
-        function updateCounter() {
-            count += increment;
-            if (count < target) {
-                counter.innerText = Math.ceil(count);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.innerText = target;
-            }
-        }
-
-        updateCounter();
-    }
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target.querySelector("h1");
-                if (!counter.dataset.animated) {
-                    runCounter(counter);
-                    counter.dataset.animated = "true";
-                }
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    counters.forEach(counter => {
-        counter.setAttribute("data-target", counter.innerText);
-        counter.innerText = "0";
-        observer.observe(counter.parentElement); 
-    });
-});
-
-
 const icons = document.querySelector('.icons');
 const images = Array.from(icons.querySelectorAll('img'));
 
@@ -106,6 +62,49 @@ images.forEach((img) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".number h1");
+    const speed = 200;
+
+    function runCounter(counter) {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+        const increment = target / speed;
+
+        function updateCounter() {
+            count += increment;
+            if (count < target) {
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target;
+            }
+        }
+
+        updateCounter();
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target.querySelector("h1");
+                if (!counter.dataset.animated) {
+                    runCounter(counter);
+                    counter.dataset.animated = "true";
+                }
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counter.setAttribute("data-target", counter.innerText);
+        counter.innerText = "0";
+        observer.observe(counter.parentElement); 
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
 
   const textEls = Array.from(document.querySelectorAll("h1, h2, p, a"));
 
@@ -145,11 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,        // ✨ har view pe sirf 1 card
+    slidesPerView: 1,       
     slidesPerGroup: 1,
     spaceBetween: 0,
     loop: true,
-    centeredSlides: false,   // ✨ start se align ho slides
+    centeredSlides: false,  
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -160,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 1
       },
       768: {
-        slidesPerView: 1,    // ✨ desktop pe bhi 1 card (agar 2 chahiye to 2 likh dena)
+        slidesPerView: 1,  
         slidesPerGroup: 1
       }
     }
