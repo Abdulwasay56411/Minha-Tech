@@ -55,6 +55,7 @@ rightCircle.addEventListener('click', () => {
         currentPage = 1;
         showCards(8);
         updateCircles();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 });
 
@@ -63,6 +64,7 @@ leftCircle.addEventListener('click', () => {
         currentPage = 0;
         showCards(0);
         updateCircles();
+     window.scroll({top: 0, behavior: 'smooth'})
     }
 });
 
