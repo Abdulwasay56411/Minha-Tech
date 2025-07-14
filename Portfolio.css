@@ -130,6 +130,7 @@ header {
 .cards-section {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-evenly;
     margin: 40px;
 }
