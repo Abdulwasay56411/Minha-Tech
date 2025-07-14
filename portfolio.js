@@ -53,7 +53,7 @@ updateCircles();
 rightCircle.addEventListener('click', () => {
     if (currentPage === 0) {
         currentPage = 1;
-        showCards(4);
+        showCards(8);
         updateCircles();
     }
 });
@@ -68,7 +68,7 @@ leftCircle.addEventListener('click', () => {
 
 function showCards(startIndex) {
     cards.forEach((card, index) => {
-        if (index >= startIndex && index < startIndex + 4) {
+        if (index >= startIndex && index < startIndex + 8) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';

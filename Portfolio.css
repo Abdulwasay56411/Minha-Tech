@@ -135,7 +135,7 @@ header {
 }
 
 .cards {
-    width: 561px;
+    width: 565px;
     height: 100%;
     border: 2px solid #00000040;
     margin-top: 30px;
@@ -143,8 +143,9 @@ header {
 }
 
 .cards img {
-    width: 557px;
-    height: 340px;
+    border-radius: 10px 10px 0px  0px;
+    width: 561px;
+    height: 300px;
 }
 
 .cards h1 {
@@ -160,133 +161,10 @@ header {
     font-size: 15.5px;
     font-weight: 400;
     line-height: 1.2;
-    padding-left: 12px;
+    padding: 0px 12px 0px 12px;
 }
 
 .cards a {
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    padding-left: 12px;
-    color: #06B8FF;
-    display: block;
-    margin: 10px 0px;
-    text-decoration: none;
-}
-
-.hero {
-    width: 561px;
-    height: 100%;
-    border: 2px solid #00000040;
-    border-radius: 12px;
-    margin-top: 30px;
-}
-
-.hero img {
-    width: 557px;
-    height: 496px;
-}
-
-.hero h1 {
-    font-family: 'Poppins';
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 23px;
-    padding: 12px;
-}
-
-.hero p {
-    font-family: 'Inter';
-    font-size: 15.5px;
-    font-weight: 400;
-    line-height: 1.2;
-    padding-left: 12px;
-}
-
-.hero a {
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    padding-left: 12px;
-    color: #06B8FF;
-    display: block;
-    margin: 10px 0px;
-    text-decoration: none;
-}
-
-.hero-card {
-    width: 561px;
-    height: 100%;
-    border: 2px solid #00000040;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-.hero-card img {
-    width: 557px;
-    height: 496px;
-}
-
-.hero-card h1 {
-    font-family: 'Poppins';
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 23px;
-    padding: 12px;
-}
-
-.hero-card p {
-    font-family: 'Inter';
-    font-size: 15.5px;
-    font-weight: 400;
-    line-height: 1.2;
-    padding-left: 12px;
-}
-
-.hero-card a {
-    font-family: 'Inter';
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    padding-left: 12px;
-    color: #06B8FF;
-    display: block;
-    margin: 10px 0px;
-    text-decoration: none;
-}
-
-.hero-section {
-    width: 561px;
-    height: 100%;
-    border: 2px solid #00000040;
-    border-radius: 12px;
-    margin-top: -100px;
-}
-
-.hero-section img {
-    width: 557px;
-    height: 496px;
-}
-
-.hero-section h1 {
-    font-family: 'Poppins';
-    font-size: 23px;
-    font-weight: 600;
-    line-height: 23px;
-    padding: 12px;
-}
-
-.hero-section p {
-    font-family: 'Inter';
-    font-size: 15.5px;
-    font-weight: 400;
-    line-height: 1.2;
-    padding-left: 12px;
-}
-
-.hero-section a {
     font-family: 'Inter';
     font-weight: 600;
     font-size: 20px;
