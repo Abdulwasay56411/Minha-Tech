@@ -7,6 +7,7 @@
 body {
     max-width: 1440px;
     margin: 0 auto;
+    font-family: 'Inter';
 }
 
 header {
@@ -22,37 +23,26 @@ header {
 
 }
 
+
 .logo img {
     width: 155px;
     height: auto;
     padding-top: 10px;
 }
 
+
 .button-link {
-    font-size: 12px;
-    font-family: 'Orbitron';
-    padding: 10px 30px;
-    margin-left: 18px;
+    font-size: 16px;
+    margin: 10px 20px;
     color: #fff;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
     text-decoration: none;
     display: inline-block;
 }
 
 .btn h1 {
-    font-size: 12px;
-    font-family: 'Orbitron';
-    padding: 10px 30px;
+    font-size: 16px;
+    margin: 10px 30px;
     color: #fff;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
     text-decoration: none;
     display: inline-block;
 }
@@ -64,20 +54,19 @@ header {
 }
 
 .menu-icon {
-   display: none;
-   font-size: 20px;
-   color: #fff;
-   cursor: pointer;
-   padding: 2px 7px;
-   border: 2px solid transparent;
-   border-radius: 8px;
-   background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-   background-origin: border-box;
-   background-clip: padding-box, border-box;
+    display: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 2px 7px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 .heading {
-    font-family: 'Orbitron';
     display: flex;
     justify-content: center;
 }
@@ -96,7 +85,6 @@ header {
 .text {
     display: flex;
     justify-content: center;
-    font-family: 'Orbitron';
     padding-top: 15px;
     padding-bottom: 80px;
 }
@@ -120,7 +108,6 @@ header {
 }
 
 .heading-section h2 {
-    font-family: 'Poppins';
     font-size: 30px;
     font-weight: 600;
     color: #0A1A2C;
@@ -130,8 +117,8 @@ header {
 .cards-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-evenly;
+    gap: 40px;
+    justify-content: center;
     margin: 40px;
 }
 
@@ -139,18 +126,17 @@ header {
     width: 565px;
     height: 480px;
     border: 2px solid #00000040;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 12px;
 }
 
 .cards img {
-    border-radius: 10px 10px 0px  0px;
+    border-radius: 10px 10px 0px 0px;
     width: 561px;
     height: 300px;
 }
 
 .cards h1 {
-    font-family: 'Poppins';
     font-size: 23px;
     font-weight: 600;
     line-height: 23px;
@@ -158,7 +144,6 @@ header {
 }
 
 .cards p {
-    font-family: 'Inter';
     font-size: 15.5px;
     font-weight: 400;
     line-height: 1.2;
@@ -166,7 +151,6 @@ header {
 }
 
 .cards a {
-    font-family: 'Inter';
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
@@ -230,7 +214,6 @@ footer {
 
 
 .footer-section {
-    font-family: 'Lato';
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -256,7 +239,8 @@ footer {
 
 .under-line .line7 {
     width: 90%;
-    height: 3px;
+    height: 1px;
+    opacity: 30%;
     background-color: #D7E0E5;
     border-radius: 10px;
     margin: 50px auto;
@@ -269,7 +253,6 @@ footer {
 }
 
 .under-para p {
-    font-family: 'Lato';
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -285,7 +268,8 @@ footer {
     background-color: #FFFFFF;
     text-decoration: none;
     text-align: center;
-    line-height: 40px;
+    line-height: 37px;
+    padding: 0px 5px;
     margin-right: 10px;
 }
 
@@ -355,6 +339,10 @@ footer {
         align-items: center;
         text-align: center;
     }
+
+    .under-line {
+        padding-top: 60px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -379,10 +367,15 @@ footer {
     }
 
     .button-link {
+        padding: 10px 30px;
+        font-size: 12px;
         margin: 5px 0;
         background-image: none;
     }
-    .btn h1{
+
+    .btn h1 {
+        padding: 10px 30px;
+        font-size: 12px;
         margin: 5px 0;
         background-image: none;
     }
@@ -430,6 +423,7 @@ footer {
     .logo img {
         width: 120px;
     }
+
     .heading h1 {
         font-size: 1.8rem;
     }
@@ -452,9 +446,8 @@ footer {
         width: 90%;
     }
 
-    .under-line {
-        padding-top: 60px;
+    .footer-para p {
+        font-size: 14px;
     }
+
 }
-
-

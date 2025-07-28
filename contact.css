@@ -7,6 +7,7 @@
 body {
     max-width: 1440px;
     margin: 0 auto;
+    font-family: 'Inter';
 }
 
 header {
@@ -30,33 +31,19 @@ header {
 }
 
 .button-link {
-    font-size: 12px;
-    font-family: 'Orbitron';
-    padding: 10px 30px;
-    margin-left: 18px;
+    font-size: 16px;
+    margin: 10px 20px;
     color: #fff;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
     text-decoration: none;
     display: inline-block;
 }
 
 .btn h1 {
-    font-size: 12px;
-    font-family: 'Orbitron';
-    padding: 10px 30px;
-    margin-left: 18px;
-    color: #fff;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    background-image: linear-gradient(#0A1A2C), linear-gradient(to right, #06B8FF, #00FB94);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 20px;
     display: inline-block;
+    color: #fff;
+    text-decoration: none;
 }
 
 .button-link:hover {
@@ -81,7 +68,6 @@ header {
 
 
 .container-section {
-    font-family: 'Montserrat';
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -118,7 +104,6 @@ header {
 }
 
 .input-section {
-    font-family: 'Montserrat';
     width: 100%;
     max-width: 500px;
     height: 955px;
@@ -138,7 +123,6 @@ header {
 }
 
 .custom-select {
-    font-family: 'Montserrat';
     width: 90%;
     height: 50px;
     font-size: 14px;
@@ -158,7 +142,6 @@ header {
 }
 
 .text-section h1 {
-    font-family: 'Poppins';
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
@@ -201,7 +184,6 @@ header {
 
 
 .message-section textarea {
-    font-family: 'Poppins';
     width: 80%;
     height: 130px;
     margin-top: 10px;
@@ -217,7 +199,6 @@ header {
 }
 
 .message-section label {
-    font-family: 'Nunito';
     font-weight: 400;
     font-size: 16px;
     color: #787878;
@@ -226,7 +207,6 @@ header {
 button {
     font-size: 13px;
     margin-top: 20px;
-    font-family: 'Orbitron';
     padding: 10px 35px;
     color: #fff;
     border: none;
@@ -247,7 +227,6 @@ footer {
 }
 
 .footer-section {
-    font-family: 'Lato';
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -273,7 +252,8 @@ footer {
 
 .under-line .line7 {
     width: 90%;
-    height: 3px;
+    height: 1px;
+    opacity: 30%;
     background-color: #D7E0E5;
     border-radius: 10px;
     margin: 50px auto;
@@ -286,7 +266,6 @@ footer {
 }
 
 .under-para p {
-    font-family: 'Lato';
     font-weight: 500;
     font-size: 16px;
     padding-left: 20px;
@@ -302,7 +281,8 @@ footer {
     background-color: #FFFFFF;
     text-decoration: none;
     text-align: center;
-    line-height: 40px;
+    line-height: 37px;
+    padding: 0px 5px;
     margin-right: 10px;
 }
 
@@ -323,18 +303,19 @@ footer {
     transform: translateY(0);
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
     .container-section {
         flex-direction: column;
         align-items: center;
         padding: 40px 20px;
     }
 
-    .heading-section{
+    .heading-section {
         width: 90%;
         height: auto;
         margin-bottom: 70px;
     }
+
     .input-section {
         width: 100%;
         max-width: 500px;
@@ -379,7 +360,7 @@ footer {
         width: 100%;
     }
 }
- 
+
 
 @media (max-width: 992px) {
     .footer-section {
@@ -411,11 +392,15 @@ footer {
     }
 
     .button-link {
+        padding: 10px 30px;
+        font-size: 12px;
         margin: 5px 0;
         background-image: none;
     }
 
     .btn h1 {
+        padding: 10px 30px;
+        font-size: 12px;
         margin: 5px 0;
         background-image: none;
     }
@@ -481,6 +466,10 @@ footer {
 
     .under-line {
         padding-top: 60px;
+    }
+
+    .footer-para p {
+        font-size: 14px;
     }
 }
 

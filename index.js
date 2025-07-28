@@ -54,56 +54,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const icons = document.querySelector('.icons');
-const images = Array.from(icons.querySelectorAll('img'));
+// const icons = document.querySelector('.icons');
+// const images = Array.from(icons.querySelectorAll('img'));
 
-let positions = [];
-const gap = 40;
-const speed = 1;
+// let positions = [];
+// const gap = 40;
+// const speed = 1;
 
-function initPositions() {
-  let x = 0;
-  images.forEach((img, i) => {
-    positions[i] = x;
-    img.style.position = 'absolute';
-    img.style.left = x + 'px';
-    x += img.offsetWidth + gap;
-  });
-}
+// function initPositions() {
+//   let x = 0;
+//   images.forEach((img, i) => {
+//     positions[i] = x;
+//     img.style.position = 'absolute';
+//     img.style.left = x + 'px';
+//     x += img.offsetWidth + gap;
+//   });
+// }
 
-function scrollImages() {
-  for (let i = 0; i < images.length; i++) {
-    positions[i] -= speed;
+// function scrollImages() {
+//   for (let i = 0; i < images.length; i++) {
+//     positions[i] -= speed;
 
-    if (positions[i] + images[i].offsetWidth < 0) {
-      let maxRight = Math.max(...positions.map((pos, idx) => pos + images[idx].offsetWidth));
-      positions[i] = maxRight + gap;
-    }
+//     if (positions[i] + images[i].offsetWidth < 0) {
+//       let maxRight = Math.max(...positions.map((pos, idx) => pos + images[idx].offsetWidth));
+//       positions[i] = maxRight + gap;
+//     }
 
-    images[i].style.left = positions[i] + 'px';
-  }
-  requestAnimationFrame(scrollImages);
-}
+//     images[i].style.left = positions[i] + 'px';
+//   }
+//   requestAnimationFrame(scrollImages);
+// }
 
 
-let loadedCount = 0;
-images.forEach((img) => {
-  if (img.complete) {
-    loadedCount++;
-    if (loadedCount === images.length) {
-      initPositions();
-      scrollImages();
-    }
-  } else {
-    img.onload = () => {
-      loadedCount++;
-      if (loadedCount === images.length) {
-        initPositions();
-        scrollImages();
-      }
-    };
-  }
-});
+// let loadedCount = 0;
+// images.forEach((img) => {
+//   if (img.complete) {
+//     loadedCount++;
+//     if (loadedCount === images.length) {
+//       initPositions();
+//       scrollImages();
+//     }
+//   } else {
+//     img.onload = () => {
+//       loadedCount++;
+//       if (loadedCount === images.length) {
+//         initPositions();
+//         scrollImages();
+//       }
+//     };
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
 
