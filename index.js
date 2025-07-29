@@ -11,47 +11,32 @@ window.addEventListener('pageshow', () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".number h1");
-    const speed = 200;
+  const counters = document.querySelectorAll(".number h1");
+  const speed = 200;
 
-    function runCounter(counter) {
-        const target = +counter.getAttribute("data-target");
-        let count = 0;
-        const increment = target / speed;
+  function runCounter(counter) {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const increment = target / speed;
+      const needsPlus = counter.getAttribute("data-plus") === "true";
 
-        function updateCounter() {
-            count += increment;
-            if (count < target) {
-                counter.innerText = Math.ceil(count);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.innerText = target;
-            }
-        }
+      function updateCounter() {
+          count += increment;
+          if (count < target) {
+              const value = Math.ceil(count);
+              counter.innerText = needsPlus ? `${value}+` : value;
+              requestAnimationFrame(updateCounter);
+          } else {
+              counter.innerText = needsPlus ? `${target}+` : target;
+          }
+      }
 
-        updateCounter();
-    }
+      updateCounter();
+  }
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target.querySelector("h1");
-                if (!counter.dataset.animated) {
-                    runCounter(counter);
-                    counter.dataset.animated = "true";
-                }
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
-
-    counters.forEach(counter => {
-        counter.setAttribute("data-target", counter.innerText);
-        counter.innerText = "0";
-        observer.observe(counter.parentElement); 
-    });
+  counters.forEach(runCounter);
 });
+
 
 
 // const icons = document.querySelector('.icons');

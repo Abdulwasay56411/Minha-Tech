@@ -58,6 +58,7 @@ header {
   display: none;
   font-size: 20px;
   color: #fff;
+  user-select: none;
   cursor: pointer;
   padding: 2px 7px;
   border: 2px solid transparent;
@@ -703,12 +704,12 @@ footer {
   .btn {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 64px;
     right: 10px;
+    border-radius: 10px;
     background: #0A1A2C;
     flex-direction: column;
     padding: 10px;
-    z-index: 10;
   }
 
   .btn.show {
