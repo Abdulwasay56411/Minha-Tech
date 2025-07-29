@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = +counter.getAttribute("data-target");
       let count = 0;
       const increment = target / speed;
+
+      
       const needsPlus = counter.getAttribute("data-plus") === "true";
 
       function updateCounter() {
@@ -34,9 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCounter();
   }
 
-  counters.forEach(runCounter);
-});
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const counter = entry.target.querySelector("h1");
+              if (!counter.dataset.animated) {
+                  runCounter(counter);
+                  counter.dataset.animated = "true";
+              }
+          }
+      });
+  }, {
+      threshold: 0.5
+  });
 
+  counters.forEach(counter => {
+      counter.setAttribute("data-target", counter.innerText);
+      counter.innerText = "0";
+      observer.observe(counter.parentElement);
+  });
+});
 
 
 // const icons = document.querySelector('.icons');
